@@ -1,0 +1,14 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary.py https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%88%A6%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E9%BA%BB%E9%9B%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%8A%E3%83%AB%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9R
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+/home/penguin/code_wsl/ollama-langchain-sample/websummary.py:28: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the :class:`~langchain-ollama package and should be used instead. To use it run `pip install -U :class:`~langchain-ollama` and import as `from :class:`~langchain_ollama import OllamaLLM``.
+  llm = Ollama(model="llama3.2", base_url=f"http://{ollama_host}:11434")
+「対戦アイドル麻雀ファイナルロマンスR」は、1996年にリリースされたアダルトゲーム。ゲームのタイトルは「ファイナ ルロマンスR」となりました。
+
+本作は、アーケードで最初に発売され、1997年にはWindows 95用でも発売されました。後日、Nintendo SwitchとWindows 10/11向けにもリリースされました。
+
+ゲームのタイトルは「対戦麻雀ファイナルロマンスR」ですが、本作が実際に発売されたタイトルは「対戦アイドル麻雀フ ァイナルロマンスR」となりました。これにより、本作が後に「ファイナルロマンスR」という名前でリリースされるようになりました。
+
+本作のキャラクターは、4人から8人のプレイヤーが参加する対戦型ゲームであり、プレイヤーは麻雀をプレイし、他のプレイヤーやキャラによって攻撃を受けることができる。ゲームのストーリーは、麻雀の世界で活躍するアイドルと呼ばれるキャラクターが中心となっています。
+
+本作は、1996年にリリースされたアダルトゲームの1つであり、後に「対戦アイドル麻雀ファイナルロマンス2・R・4 Special」としてリリースされました。
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$

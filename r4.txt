@@ -1,0 +1,7 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary.py https://www.itmedia.co.jp/aiplus/articles/2412/21/news081.html
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+米OpenAIは12月20日に新たなAIモデル「o3」を発表しました。o3は、高度な推論能力を持つAIモデルで、汎用人工知能（AGI）の存在を評価するベンチマークでもこれまでにない高スコアを記録しています。また、「o3-mini」も開発されており、o3よりも思考時間が短くコスト効率が高いです。o3の一般公開は2025年1月末ごろから始まる予定です。
+
+o3には、高度な推論能力を持つAIモデルを含む様々な機能があります。o3は、推論、数学、コーディングなどの分野で人間の専門家を上回る高スコアを記録しています。また、「ARC-AGI」ベンチマークでは最大87.5％（〜75.7％）のスコアを記 録しています。
+
+o3は、安全性について慎重にテストする必要があると考えているため、安全性をテーマにする研究者に向けてアーリーアクセスへの参加募集を始めました。

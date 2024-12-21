@@ -1,0 +1,11 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary.py https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%88%A6%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E9%BA%BB%E9%9B%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%8A%E3%83%AB%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9R
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+「対戦アイドル麻雀ファイナルロマンスR」は、1996年にリリースされたアーケードゲームで、アダルトゲームや脱衣麻雀 ゲームに特化したゲームです。ゲームは、プレイヤーが女性のキャラクターと対戦することで、ゲームを勝ち負けすることができます。ゲームには、様々なゲームモードやストーリーがあり、プレイヤーは variousキャラクターのストーリーを体験することができます。
+
+ゲームは、1996年にリリースされ、Seaga Saturnで最初に登場しました。その後、1997年にはWindows 95版がリリースされました。2021年にNintendo Switch版がリリースされ、2023年にはWindows 10/11版がリリースされました。
+
+ゲームは、アダルトゲームや脱衣麻雀ゲームのジャンルにカターインされることが多く、その開発者やリリーショナーは、同様のジャンルの他のゲームで知られています。
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary.py https://ja.wikipedia.org/wiki/%E5%AF%BE%E6%88%A6%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E9%BA%BB%E9%9B%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%8A%E3%83%AB%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9R
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+本作は、1996年にソフトバンクから発売されたアーケードゲーム。麻雀を題材としたパズルゲームで、本作のタイトル「ファイナルロマンスR」は、人形のようなキャラクターが脱着するシーンが多く含まれていることで有名である。
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$
