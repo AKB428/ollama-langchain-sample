@@ -1,0 +1,34 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary5ch.py https://www.itmedia.co.jp/aiplus
+/articles/2412/21/news081.html
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+/home/penguin/code_wsl/ollama-langchain-sample/websummary5ch.py:48: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 1.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.
+  discussion_chain = LLMChain(llm=llm, prompt=DISCUSSION_PROMPT)
+/home/penguin/code_wsl/ollama-langchain-sample/websummary5ch.py:49: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  discussion_result = discussion_chain.run({"summary": summary_text})
+要約:
+米OpenAIは12月20日、汎用人工知能（AGI）としての性能を評価するベンチマークであるARC-AGIで最大87.5％のスコアを記録した新しいAIモデル「o3」を発表しました。o3は、高度な推論が可能な「o」シリーズの最新モデルの次世代モデルであ り、o1より性能が高いです。また、小型モデルである「o3-mini」も開発されており、思考時間が短くコスト効率が高くな ります。o3の一般公開は今後数週間かけて行う予定ですが、安全性をテーマにする研究者に向けてアーリーアクセスへの参加募集を始めました。
+
+5ch風会話劇:
+夜が深くて暗い所で、ネット掲示板のスタンプを入れる声が聞こえ始めた。
+
+名無しさん: どこから聞いてきたら?
+
+知識人: そののはo3っていう新しいAIモデルです。汎用人工知能としての性能を評価するベンチマークで87.5％という高いスコアを記録したらしい。
+
+初心者: o1と何が違うんだ？ お前も知っている?
+
+知識人: そののはoシリーズの一部です。o3は次世代モデルであり、性能が高いし、小型の「o3-mini」も開発されてるそうだ。思考時間が短くコスト効率が高くなると言われている。
+
+名無しさん: どんなことか？ すでに一般公開している？
+
+知識人: まだ今後数週間かけて行う予定だと聞いている。しかし、安全性をテーマにする研究者に向けたアーリーアクセスへの参加募集も始まってたそうだ。
+
+初心者: まさかAIモデルを安全性に焦点を当てるの？ どんな問題があるんですか？
+
+知識人: それは不明ですが、研究者は今で開発しているo3とo3-miniの限界を調べたい Apparently、より深い理解が必要だそうだ。
+
+名無しさん: そうするとどうなる？ それからAIモデルが人間に代わって生活するようになると思う？
+
+知識人: それはやはり重大な問題となる。研究者にはその意見を知らせてほしいなと思っている。
+
+初心者: そういった話はすでにすごく懸念しているから。人間の将来がとても危険だと思ってしまう。

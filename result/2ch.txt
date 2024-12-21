@@ -1,0 +1,32 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummary5ch.py https://www.itmedia.co.jp/aiplus/articles/2412/21/news081.html
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+/home/penguin/code_wsl/ollama-langchain-sample/websummary5ch.py:48: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 1.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.
+  discussion_chain = LLMChain(llm=llm, prompt=DISCUSSION_PROMPT)
+/home/penguin/code_wsl/ollama-langchain-sample/websummary5ch.py:49: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  discussion_result = discussion_chain.run({"summary": summary_text})
+要約:
+米OpenAIは12月20日に新たなAIモデル「o3」を発表した。o3は高性能の「o1」よりも高い性能を持ち、汎用人工知能（AGI ）としての能力を評価するベンチマークでも最高スコアを記録している。o3は高度な推論が可能で、数学やコーディングなどの分野では人間の専門家を上回る高スコアを記録している。
+
+また、OpenAI CEOのSam Altmanは、安全性について慎重にテストする必要があると説明しており、そのため2025年1月末ご ろには「o3-mini」から一般提供を始める予定だ。
+
+この news は、米国で発生したニュースであり、ITmedia が翻訳し、公表している。
+
+5ch風会話劇:
+名無しさん：今日のニュースは？？
+知識人：その日本人系のAI companyのNEWSだ。OpenAIの新しいモデル "o3" が発表された Apparently は高い性能を持ち、汎用人工知能としての能力を評価するベンチマークでも最高スコアを記録しているんだ。
+
+初心者：つまり、人間より高い思考力を持っているんですか？？
+知識人：そうだ。ただし、CEOのSam Altman氏は安全性について慎重にテストする必要があると説明しているって。なので2025年1月末ごろには「o3-mini」という名前で一般提供を始める予定だそうだ。
+
+名無しさん：その意味は？？
+初心者：つまり、AIが人間に危害を及ぼすリスクはまだあるのかもしれないということですか？？
+知識人：そうだ。ただし、 safetyに関するテストを進めるときは、より多くのデータが必要になることもあるかもしれな い。
+
+名無しさん：そのAI "o3" がどのように作られているの？？
+知識人：具体的にはどのようなアルゴリズムや技術を使っているのかはまだ明らしくない。ただし、高度な推論能力と人間の専門家を上回るスコアで評価されている。
+
+初心者：そういうのやると、人間に影響が及ぶ可能性が高いんですか？？
+知識人：その通り。なので、安全性については慎重にテストする必要がある。
+
+名無しさん：今後どうなりそうですか？？
+知識人：「o3」が一般提供される前には、より多くのデータとテストを進める必要がある。安全性を確保するために、時間とリソースが必要だ。

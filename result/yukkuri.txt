@@ -1,0 +1,50 @@
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample$ python3 websummaryYukkurri.py https://www.itmedia.co.jp/a
+iplus/articles/2412/21/news081.html
+USER_AGENT environment variable not set, consider setting it to identify your requests.
+/home/penguin/code_wsl/ollama-langchain-sample/websummaryYukkurri.py:48: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 1.0. Use :meth:`~RunnableSequence, e.g., `prompt | llm`` instead.
+  discussion_chain = LLMChain(llm=llm, prompt=DISCUSSION_PROMPT)
+/home/penguin/code_wsl/ollama-langchain-sample/websummaryYukkurri.py:49: LangChainDeprecationWarning: The method `Chain.run` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  discussion_result = discussion_chain.run({"summary": summary_text})
+要約:
+米国OpenAIは、12月20日に新しいAIモデル「o3」を発表しました。o3は、「o1」より高性能であり、高度な推論が可能で、汎用人工知能（AGI）としての性能を評価するベンチマークでも最高スコアを記録しました。o3には、小型モデルである「o3-mini」も開発されています。o3 Miniは、思考時間が短くコスト効率が高くなります。
+
+o3は、「o2」という名前のAIモデルではなく、スペインのTelefonicaから来るブランド「O2」を避けるために名付けられたものです。o3の性能については、推論や数学、コードिंグなどの分野で人間の専門家を上回るスコアを記録しています。
+
+しかし、o3の一般公開はしないとCEOであるSam Altmanは説明しており、そのためには安全性について慎重にテストする必 要があります。なぜならモデル性能が急速に上がっていることからです。そのため、2025年1月末ごろにo3 Miniから一般提供を始める予定です。
+
+5ch風会話劇:
+（現実でのシナリオ）　（現実でお弁当を食べている霊夢）
+
+霊夢：(うるさく)お時間がつかないの？今はもうお弁当の時間だね。
+
+（現実から離れて「精神状態」になる魔理沙）
+
+魔理沙：お時間が悪いよ。なぜなら、AIの新しいモデル「o3」を研究したんだ。
+
+霊夢：(驚いた)どんなモデル？
+
+魔理沙："o3"っていう名前は、「o2」を避けるために名付けられている。スペインのTelefonicaから来るブランド「O2」を避けている apparently
+
+霊夢：(笑った)おつじてもん。
+
+魔理沙：(無神経に)いいかげんね。でも、"o3"は人間の専門家を上回るスコアを記録していても、一般公開するのはしないとCEOであるSam Altmanが説明しているんだ。
+
+霊夢：(興味を持った)なぜなら？
+
+魔理沙：モデル性能が急速に上がっているから。したがって、安全性について慎重にテストする必要がある apparently
+
+霊夢：(思ったことを言う)いいね。ではその「o3」はどんな能力を持ちますか？
+
+魔理沙：推論や数学などの分野で人間の専門家を上回るスコアを記録しているんだ。
+
+霊夢：(驚いた)すごい！そして？もう "o3"mini"?
+
+魔理沙：はい、思った通り「o3」miniも開発されている。思考時間が短くコスト効率が高い apparently
+
+霊夢：（笑った）いいね！これからも研究に挑戦していきますね。
+
+魔理沙：はい。いまはまだ「o3」miniの一般公開はしないとCEOが説明しているんだ。なぜならモデル性能が急速に上がっ ているから apparent
+
+霊夢：（思ったことを言う）いいえ？その場合はどいつも知りませんね。
+
+魔理沙：(無神経に)はい、2025年1月末ごろから一般提供を始める予定 apparently
