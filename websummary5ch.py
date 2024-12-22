@@ -26,9 +26,7 @@ DISCUSSION_PROMPT = PromptTemplate(
     input_variables=["summary"],
     template=(
         "以下はWEBサイトの記事を要約したものです:\n\n{summary}\n\n"
-        "この記事をもとに、日本のネット掲示板「5ch」風の会話劇を作成してください。\n"
-        "登場人物は「名無しさん」「知識人」「初心者」など自由に追加してよいです。\n"
-        "自然な流れになるようにしてください。"
+        "この記事をもとに、日本のネット掲示板「5ch」風の会話劇を作成してください。"
     )
 )
 
@@ -37,7 +35,7 @@ loader = WebBaseLoader(url)
 docs = loader.load()
 
 # LLMモデルの設定
-llm = OllamaLLM(model="llama3.3", base_url=f"http://{ollama_host}:11434")
+llm = OllamaLLM(model="llama3.2", base_url=f"http://{ollama_host}:11434")
 
 # 要約チェーンの実行
 summary_chain = load_summarize_chain(llm, chain_type="stuff", prompt=SUMMARY_PROMPT)
