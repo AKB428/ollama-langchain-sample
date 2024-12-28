@@ -30,15 +30,15 @@ embeddings = HuggingFaceEmbeddings(model_name=embed_model_id)
 # 環境変数からOLLAMA_HOSTを取得（未設定の場合はlocalhostを使用）
 ollama_host = os.getenv("OLLAMA_HOST", "localhost")
 llm = OllamaLLM(model="llama3.2", base_url=f"http://{ollama_host}:11434", callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
-    
+
+index = VectorstoreIndexCreator(
+    vectorstore_cls=Chroma,
+    embedding=embeddings
+).from_loaders([loader])    
+
 while True:
     query = input("\n質問: ")
     if query == "exit":
         break
-
-    index = VectorstoreIndexCreator(
-        vectorstore_cls=Chroma,
-        embedding=embeddings
-    ).from_loaders([loader])
     answer = index.query(query, llm=llm)
     print(answer)
