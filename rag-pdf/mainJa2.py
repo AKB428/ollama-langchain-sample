@@ -1,45 +1,16 @@
 from langchain.document_loaders import OnlinePDFLoader
 from langchain.vectorstores import Chroma
+from langchain_ollama import OllamaLLM
 from langchain.chains import RetrievalQA
 from langchain import PromptTemplate
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain_huggingface import HuggingFaceEmbeddings
 import sys
 import os
 from transformers import AutoTokenizer, AutoModel
 import torch
 from langchain.embeddings.base import Embeddings
-
-# 日本語埋め込み用クラス
-class RuriEmbeddings:
-    def __init__(self, model_name="cl-nagoya/ruri-large"):
-        # モデルとトークナイザーのロード
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModel.from_pretrained(model_name)
-
-    def embed_text(self, text):
-        # テキストをトークナイズ
-        inputs = self.tokenizer(text, return_tensors="pt", padding=True, truncation=True)
-        # モデルで埋め込み生成
-        with torch.no_grad():
-            outputs = self.model(**inputs)
-            # [CLS]トークンの埋め込みを取得
-            embeddings = outputs.last_hidden_state[:, 0, :].squeeze().numpy()
-        return embeddings
-
-    def embed_documents(self, texts):
-        # 複数テキストを一括で埋め込み
-        return [self.embed_text(text) for text in texts]
-
-class HuggingFaceEmbeddings(Embeddings):
-    def __init__(self, model_name="cl-nagoya/ruri-large"):
-        self.embedder = RuriEmbeddings(model_name=model_name)
-
-    def embed_documents(self, texts):
-        return self.embedder.embed_documents(texts)
-
-    def embed_query(self, text):
-        return self.embedder.embed_text(text)
 
 # コマンドライン引数からPDFのURLを取得
 if len(sys.argv) < 2:
@@ -55,9 +26,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
 all_splits = text_splitter.split_documents(data)
 
+
+# https://touch-sp.hatenablog.com/entry/2024/07/31/081420
 # ベクトルストア作成
-embedding_function = HuggingFaceEmbeddings(model_name="cl-nagoya/ruri-large")
-vectorstore = Chroma.from_documents(documents=all_splits, embedding=embedding_function)
+embed_model_id = "pkshatech/GLuCoSE-base-ja"
+embeddings = HuggingFaceEmbeddings(model_name=embed_model_id)
+vectorstore = Chroma.from_documents(documents=all_splits, embedding=embeddings)
 
 # RAGセットアップ
 template = """以下の文脈を使用して、最後にある質問に答えてください。
@@ -76,8 +50,12 @@ while True:
     if query == "exit":
         break
 
+    # 環境変数からOLLAMA_HOSTを取得（未設定の場合はlocalhostを使用）
+    ollama_host = os.getenv("OLLAMA_HOST", "localhost")
+    llm = OllamaLLM(model="llama3.2", base_url=f"http://{ollama_host}:11434", callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
+    
     qa_chain = RetrievalQA.from_chain_type(
-        llm=None,  # 適切なLLMを選択
+        llm=llm,  # 適切なLLMを選択
         retriever=vectorstore.as_retriever(),
         chain_type_kwargs={"prompt": QA_CHAIN_PROMPT},
     )
