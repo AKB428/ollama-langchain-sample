@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import OnlinePDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import Chroma
 from langchain_ollama import OllamaLLM
 from langchain.callbacks.manager import CallbackManager
@@ -15,8 +15,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 pdf_url = sys.argv[1]
-loader = OnlinePDFLoader(pdf_url)
-data = loader.load()
+loader = PyPDFLoader(pdf_url)
 
 # https://highreso.jp/edgehub/machinelearning/langchainpdf.html
 # ベクトルストア作成
@@ -32,17 +31,10 @@ index = VectorstoreIndexCreator(
     embedding=embeddings
 ).from_loaders([loader])    
 
-while True:
-    query = input("\n質問: ")
-    
-    # 入力を正規化して制御文字や不正な空白を削除
-    query = unicodedata.normalize("NFKC", query).strip()
 
-    # 空のクエリや不正なクエリをスキップ
-    if not query:
-        print("空のクエリです。再入力してください。")
-        continue
-    
+while True:
+    query = input("\query: ")
+
     if query == "exit":
         break
     answer = index.query(query, llm=llm)
