@@ -11,6 +11,7 @@ from langchain.indexes import VectorstoreIndexCreator
 import sys
 import os
 import tempfile  # 一時ファイル作成用
+import unicodedata
 
 # コマンドライン引数からPDFのローカルパスを取得
 if len(sys.argv) < 2:
@@ -56,6 +57,15 @@ index = VectorstoreIndexCreator(
 # 質問応答ループ
 while True:
     query = input("\n質問: ")
+    
+    # 入力を正規化して制御文字や不正な空白を削除
+    query = unicodedata.normalize("NFKC", query).strip()
+
+    # 空のクエリや不正なクエリをスキップ
+    if not query:
+        print("空のクエリです。再入力してください。")
+        continue
+    
     if query.lower() == "exit":
         break
     answer = index.query(query, llm=llm)
