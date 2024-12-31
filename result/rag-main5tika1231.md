@@ -231,3 +231,96 @@ Extracting text from PDF...
 回答: コンテンツーリズムがもたらす経済効果について、2015年の市場規模はエンドユーザー市場をとらえた広義の数字は１兆8,255億円（図表1-7）、製作・制作会社の売上をとらえた狭義の数字は2,007億円（図表1-8）となります。
 
 質問:
+
+--
+
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample/rag-pdf$ python3 main5-tika.py /mnt/c/Users/ganda/Downloads/DBJ最近の経済動向241227.pdf
+/home/penguin/code_wsl/ollama-langchain-sample/rag-pdf/main5-tika.py:2: LangChainDeprecationWarning: Importing TextLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+
+>> from langchain.document_loaders import TextLoader
+
+with new imports of:
+
+>> from langchain_community.document_loaders import TextLoader
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.document_loaders import TextLoader
+/home/penguin/code_wsl/ollama-langchain-sample/rag-pdf/main5-tika.py:3: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma
+/home/penguin/.local/lib/python3.10/site-packages/langchain/__init__.py:30: UserWarning: Importing PromptTemplate from langchain root module is no longer supported. Please use langchain_core.prompts.PromptTemplate instead.
+  warnings.warn(
+Extracting text from PDF...
+
+質問: 最新の日本の経済動向について資料からまとめて
+日本の経済は、2024年7～9月期の実質GDPが1.2％増加し、上方修正となりました。景気動向指数も緩やかに改善していますが、景気後退の懸念があります。また、鉱工業生産は均せば横ばい、サービス業は緩やかに持ち直っています。
+回答: 日本の経済は、2024年7～9月期の実質GDPが1.2％増加し、上方修正となりました。景気動向指数も緩やかに改善していますが、景気後退の懸念があります。また、鉱工業生産は均せば横ばい、サービス業は緩やかに持ち直っています。
+
+質問: 最新の世界の経済動向について資料からまとめて
+以下は最新の世界の経済動向をまとめたものです。
+
+**米国**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+* 政府債務拡大への懸念が強まる。
+* 金融システムのリスクに関するアンケートでは、政府債務の持続可能性が挙げられた。
+
+**日本**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+* 政府債務拡大への懸念が強まる。
+
+**ヨーロッパ**
+
+* 実質GDP成長率：2024年7～9月期は2.8％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+
+**世界経済**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 世界貿易における保護主義が増大している。
+* 政策の不確実性や中東情勢の緊迫化が世界経済に影響を及ぼす可能性がある。
+
+**金融システム**
+
+* 金融システムのリスクに関するアンケートでは、政府債務の持続可能性が挙げられた。
+* FOMCメンバーの経済見通しでは、インフレ率が上方修正された。
+回答: 以下は最新の世界の経済動向をまとめたものです。
+
+**米国**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+* 政府債務拡大への懸念が強まる。
+* 金融システムのリスクに関するアンケートでは、政府債務の持続可能性が挙げられた。
+
+**日本**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+* 政府債務拡大への懸念が強まる。
+
+**ヨーロッパ**
+
+* 実質GDP成長率：2024年7～9月期は2.8％、前期比年率。インフレ率が上方修正された。
+* 政策金利：レンジ中心値は3.875％（上限4.0％）。利下げ回数は前回予測の4回から2回に減少した。
+
+**世界経済**
+
+* 実質GDP成長率：2024年7～9月期は3.1％、前期比年率。インフレ率が上方修正された。
+* 世界貿易における保護主義が増大している。
+* 政策の不確実性や中東情勢の緊迫化が世界経済に影響を及ぼす可能性がある。
+
+**金融システム**
+
+* 金融システムのリスクに関するアンケートでは、政府債務の持続可能性が挙げられた。
+* FOMCメンバーの経済見通しでは、インフレ率が上方修正された。
+
+質問:
