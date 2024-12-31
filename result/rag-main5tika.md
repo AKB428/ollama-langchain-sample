@@ -319,3 +319,86 @@ Extracting text from PDF...
 
 以上の情報から、ブックオフは、売上高や直営店の売上高が増加する傾向があり、アプリ会員数と利用が増加していることがわかります。また、IT投資で事業基盤を強化し、効率性を上げる取り組みも行っており、これらの取り組みはブックオフの戦略的な展開を支えるものとして機能します。
 回答: ブックオフの業績に関する重要な情報は以下です。
+
+
+---
+penguin@UM790Pro:~/code_wsl/ollama-langchain-sample/rag-pdf$ python3 main5-tika.py /mnt/c/Users/ganda/Downloads/ブックオフ2024年5月期決算資料.pdf
+/home/penguin/code_wsl/ollama-langchain-sample/rag-pdf/main5-tika.py:2: LangChainDeprecationWarning: Importing TextLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+
+>> from langchain.document_loaders import TextLoader
+
+with new imports of:
+
+>> from langchain_community.document_loaders import TextLoader
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.document_loaders import TextLoader
+/home/penguin/code_wsl/ollama-langchain-sample/rag-pdf/main5-tika.py:3: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import Chroma
+
+with new imports of:
+
+>> from langchain_community.vectorstores import Chroma
+You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
+  from langchain.vectorstores import Chroma
+/home/penguin/.local/lib/python3.10/site-packages/langchain/__init__.py:30: UserWarning: Importing PromptTemplate from langchain root module is no longer supported. Please use langchain_core.prompts.PromptTemplate instead.
+  warnings.warn(
+Extracting text from PDF...
+
+質問: ブックオフの業績について教えて
+ブックオフの業績について、以下が概要です。
+
+**売上高と利益の増加**
+
+ブックオフは、2024年5月期の売上高は前年同期の売上高に比べ 108.2% 増加しました。同社のセグメント利益も前年同期 の利益に比べ 119.3% 増加しました。
+
+**新規店舗の開設**
+
+ブックオフは、2024年5月期に直営店 8 storefront をオープンしました。また、プレミアムサービス事業で新規店舗をオ ープンしたり、現有店舗を改装したりする計画があります。
+
+**海外事業の成長**
+
+ブックオフは、海外事業では2024年5月期に売上高が前年同期の売上高に比べ 115.4% 増加しました。海外事業ではセグメ ント利益も前年同期の利益に比べ 114.7% 増加しました。
+
+**その他事業の成長**
+
+ブックオフは、2024年5月期にOTHERS事業の売上高が前年同期の売上高に比べ 150.5% 増加しました。OTHERS事業ではセグ メント利益も前年同期の利益に比べ 51% 増加しました。
+
+**全社コストの増加**
+
+ブックオフは、2024年5月期の全社コストが前年同期のコストに比べ 24.5% 増加しました。
+回答: ブックオフの業績について、以下が概要です。
+
+**売上高と利益の増加**
+
+ブックオフは、2024年5月期の売上高は前年同期の売上高に比べ 108.2% 増加しました。同社のセグメント利益も前年同期 の利益に比べ 119.3% 増加しました。
+
+**新規店舗の開設**
+
+ブックオフは、2024年5月期に直営店 8 storefront をオープンしました。また、プレミアムサービス事業で新規店舗をオ ープンしたり、現有店舗を改装したりする計画があります。
+
+**海外事業の成長**
+
+ブックオフは、海外事業では2024年5月期に売上高が前年同期の売上高に比べ 115.4% 増加しました。海外事業ではセグメ ント利益も前年同期の利益に比べ 114.7% 増加しました。
+
+**その他事業の成長**
+
+ブックオフは、2024年5月期にOTHERS事業の売上高が前年同期の売上高に比べ 150.5% 増加しました。OTHERS事業ではセグ メント利益も前年同期の利益に比べ 51% 増加しました。
+
+**全社コストの増加**
+
+ブックオフは、2024年5月期の全社コストが前年同期のコストに比べ 24.5% 増加しました。
+
+質問: ブックオフの業績はいいですか？わるいですか？
+ブックオフの業績は、売上高が1兆円以上に達した2024年5月期連結実績で、約1,116億円を記録しています。また、店舗数 は836店（直営462店、FC374店）で、社員数は1,689名となります。これは、ブックオフが売上高と店舗数の増加をもって業績の好化に伴い、社員数も増えています。
+
+ブックオフは、売上高と社員数の増加にともして業績が良いと言えるでしょう。また、ブックオフの業績については、東京証券取引所の市場を通じて株式を上場しているため、株主も業績の好化に伴い、評価が高まります。
+回答: ブックオフの業績は、売上高が1兆円以上に達した2024年5月期連結実績で、約1,116億円を記録しています。また、 店舗数は836店（直営462店、FC374店）で、社員数は1,689名となります。これは、ブックオフが売上高と店舗数の増加をもって業績の好化に伴い、社員数も増えています。
+
+ブックオフは、売上高と社員数の増加にともして業績が良いと言えるでしょう。また、ブックオフの業績については、東京証券取引所の市場を通じて株式を上場しているため、株主も業績の好化に伴い、評価が高まります。
+
+質問: ブックオフの将来の企業戦略は？
+ブックオフの将来の企業戦略は、アプリ会員数を拡大し、アプリを軸とした販売施策や買取施策を進め、店舗受取サービスとキャッシュレス買取サービスを強化することで顧客に対するサービスを改善するとともに、データ分析技術の活用を重視して、競争環境に適応し持続可能なビジネス_modelを構築することである。
+回答: ブックオフの将来の企業戦略は、アプリ会員数を拡大し、アプリを軸とした販売施策や買取施策を進め、店舗受取サービスとキャッシュレス買取サービスを強化することで顧客に対するサービスを改善するとともに、データ分析技術の活用を重視して、競争環境に適応し持続可能なビジネス_modelを構築することである。
+
+質問:
